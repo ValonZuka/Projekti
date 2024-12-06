@@ -8,12 +8,24 @@
 </head>  
 <body>  
     <header>  
-        <nav class="nav">  
-            <div>  
-                <img src="logo.png" alt="Logo" />  
-            </div>  
+       
+        <nav class="nav"> 
+           
+                <ul class="sideBar">
+                    <li><a href="#" onclick="hideMenu()"><img src="icon.menu/close.png" alt="me" height="26" width="26"></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Stages</a></li>
+                    <li><a href="#">Sets</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">TPS Picture Cars</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Entertaiment</a></li>
+                    <li><a href="#">Outreach</a></li>
+                </ul>
+            
+         
             <ul class="nav-link">
-                  
                 <li class="nav-item">  
                     <a href="Stages.html" class="stages">Stages</a>  
                     <span href="Stages.html" class="hover-text">Stages</span>  
@@ -22,14 +34,10 @@
                     <a href="Sets.html" class="stages">Sets</a>
                     <span href="Sets.html" class="hover-text">Sets</span> 
                 </li>  
-
-
                 <li class="nav-item">
                     <a href="Historic_District.html" class="stages">Historic District</a>
                     <span href="Historic_District.html" class="hover-text">Historic District</span> 
                 </li>  
-
-
                 <li class="nav-item">
                     <a href="Greenspace.html" class="stages">Greenspace</a>
                     <span href="Stages.html" class="hover-text">Greenspace</span> 
@@ -43,11 +51,16 @@
                     <span href="Stages.html" class="hover-text">Contact</span> 
                 </li>  
             </ul>  
-            <div class="nav-item">
-                <a href="#" class="stages"><strong>=</strong></a>
-                <span href="Stages.html" class="hover-text">-/ </span> 
+            <div class="nav-item" onclick="showMenu()">
+                <a href="#" class="stages"><img src="icon.menu/open.png" alt="me" height="30" width="30"></a>
+                <span href="Stages.html" class="hover-text"><img src="icon.menu/open_hover.png" alt="me" height="50" width="50"> </span> 
             </div>  
+            
         </nav>  
-    </header>  
+        
+    </header> 
+    
+    
+    <script src="script.js"></script>
 </body>  
 </html>
