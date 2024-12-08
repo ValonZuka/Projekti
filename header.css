@@ -15,13 +15,6 @@
     overflow-x: hidden; 
     }
 
-    .bg-img {
-        height: 100vh; 
-        width: 100%; 
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; 
-    }
     header .nav {  
         position: fixed;  
         display: flex;  
@@ -206,6 +199,36 @@
     .nav {
         z-index: 999;
     }
+    .bg-img {
+        background-size: cover; 
+        background-position: center;
+        height: 100vh; 
+        width: 100%; 
+        position: relative; 
+    }
+    
+    .bg-img h4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    .bg-img button {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
 
 
     h2 {
@@ -230,6 +253,3 @@
         text-align: center;
         z-index: 1; 
     }
-
-
-

@@ -19,4 +19,3 @@ if(sideBar.classList.contains('active')){
 }
 
 }
-
