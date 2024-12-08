@@ -5,11 +5,23 @@
         text-decoration: none;  
         list-style: none;  
     }  
+    html {
+        scroll-behavior: smooth;
+    }
     body {
-        background: url('maca.jpg') no-repeat center center fixed;
-        background-size: cover;
+        margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
     }
 
+    .bg-img {
+        height: 100vh; 
+        width: 100%; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
     header .nav {  
         position: fixed;  
         display: flex;  
@@ -18,25 +30,38 @@
         background: transparent;  
         width: 100%;  
         padding: 10px 12%; 
+
         z-index: 1000;  
     }  
+   .hide-nav{
+    pointer-events: none; 
+    opacity: 0.5; 
+   }
+
 
     header .nav-link {  
         display: flex;  
+        flex: 1;
+        justify-content: center;
         align-items: center;  
     }  
-
+    .nav-item a{
+        color: white;
+    }
+   
     .nav-item {  
         position: relative;  
-        margin: 0 10px;  
+        margin: 0 15px;  
         padding: 0 2px;
         display: flex;  
         align-items: center; 
         justify-content: center; 
-        height: 70px;   
+        height: 70px;  
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold; 
     }  
-
-
 
     .stages {  
         color: black;  
@@ -46,7 +71,7 @@
     }  
 
     .hover-text {  
-        color: black;  
+        color: white;  
         position: absolute;  
         left: 0;  
         width: 100%;  
@@ -57,46 +82,154 @@
         font-size: 24px; 
         z-index: 0;   
     }  
+    .hover-text hhh{
+        
+       left: -60px;
+
+    }
+
+
+
 
     .nav-item:hover .hover-text {  
+        color: white;
         transform: translateY(0); 
-        transform: translateX(0);   
         opacity: 1; 
     }  
-
     .nav-item:hover .stages {  
+        
         opacity: 0;   
         transform: translateY(-20px); 
     }
 
+
+
     .sideBar{
         position: fixed;
         top: 0;
-        right: 100vh;
+        right: 0;
         bottom: 0;
         height: 100vh;
-        width:100vh ;
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.479);
+        width:  100vw;
+        background-color: rgba(0, 0, 0, 0.87);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
+        opacity: 0;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        transform:translateX(100%);
+        transform-origin: top right;
+        transition: transform 0.7s ease-in-out,opacity 0.7s ease,visibility 0s linear 0.7s;;
 
+    }
+    .sideBar img{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+  
+    
+   .sideBar.active {
+        visibility: visible ;
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 0.7s ease-in-out, opacity 0.5s ease;
     }
     .sideBar li{
         width: 100%;
-        padding: 10px 20px;
+        padding: 25px 0px;
+        text-align: center;
+        position: relative;
 
-    }
+    }  
     .sideBar a{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+   
+    .sideBar a::after{
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        
         width: 100%;
+        height: 2px;
+        background-color: white;
+        transform: translateX(-50%) scaleX(0);
+        transition:transform 0.5s ease;
+    }
+    .sideBar a:hover::after{
+       transform: translateX(-50%) scaleX(1);
+       
+    }
+
+
+    .menu-icon{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .hover-icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .menu-icon:hover #menuHoverIcon {
+        opacity: 1;
+    }
+    .menu-icon:hover #menuIcon {
+        opacity: 1;
+    }
+    .menu-icon img{
+        width: 30px;
+        height: 30px;
+        display: block;
     }
     .nav {
         z-index: 999;
     }
+
+
+    h2 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        z-index: 1; 
+    }
+
+    h4 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        padding-top: 50px;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        z-index: 1; 
+    }
+
 
 
