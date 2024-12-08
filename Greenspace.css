@@ -1,0 +1,277 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: Arial, sans-serif;  
+}  
+
+.container {  
+    position: relative;  
+    padding-top: 70px;
+}  
+
+.greenspace-section {  
+    text-align: left;  
+    padding: 50px;  
+    background-color: #f4f4f4; 
+    margin-top: 20px;
+}  
+
+.greenspace-section h2 {  
+    font-size: 2em;  
+    margin-bottom: 10px;  
+}  
+
+.greenspace-section p {  
+    font-size: 1.2em;  
+    margin-bottom: 30px;  
+}  
+
+.slider {  
+    position: relative;  
+    overflow: hidden;  
+    height: 60vh; 
+}  
+
+.slides {  
+    display: flex;  
+    transition: transform 0.5s ease;  
+}  
+
+.slide {  
+    min-width: 100%; 
+    height: auto; 
+}  
+
+.navigation {  
+    position: absolute;  
+    top: 50%;  
+    width: 100%;  
+    display: flex;  
+    justify-content: space-between;  
+    transform: translateY(-50%);  
+}  
+
+button {  
+    background-color: rgba(255, 255, 255, 0.8);  
+    border: none;  
+    cursor: pointer;  
+    padding: 10px;  
+}  
+
+footer {  
+    background-color: #333;  
+    color: white;  
+    text-align: center;  
+    padding: 20px 0;  
+}  
+
+footer h4 {  
+    font-weight: bold;  
+}  
+
+footer input {  
+    padding: 10px;  
+    margin: 10px 0;  
+    border: none;  
+    border-radius: 5px;  
+}  
+
+footer button {  
+    padding: 10px 15px;  
+    border: none;  
+    border-radius: 5px;  
+    background-color: #76c7c0;  
+    color: black;  
+    cursor: pointer;  
+}
+header .nav {  
+    position: fixed;  
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;  
+    background: white;  
+    width: 100%;  
+    padding: 10px 12%; 
+
+    z-index: 1000;  
+}  
+.hide-nav{
+pointer-events: none; 
+opacity: 0.5; 
+}
+
+
+header .nav-link {  
+    display: flex;  
+    flex: 1;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;  
+}  
+.nav-item a{
+    color: black;
+}
+
+.nav-item {  
+    position: relative;  
+    margin: 0 15px;  
+    padding: 0 2px;
+    display: flex;  
+    align-items: center; 
+    justify-content: center; 
+    height: 70px;  
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; 
+}  
+
+.stages {  
+    color: black;  
+    z-index: 1;   
+    font-size: 24px;  
+    transition: opacity 0.3s ease, transform 0.3s ease;   
+}  
+
+.hover-text {  
+    color: black;  
+    position: absolute; 
+     
+    left: 0;  
+    width: 100%;  
+    text-align: center;  
+    transform: translateY(20px);  
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;  
+    font-size: 24px; 
+    z-index: 0;   
+}  
+.hover-text hhh{
+    
+   left: -60px;
+
+}
+
+
+
+
+.nav-item:hover .hover-text {  
+    color: black;
+    transform: translateY(0); 
+    opacity: 1; 
+}  
+.nav-item:hover .stages {  
+    
+    opacity: 0;   
+    transform: translateY(-20px); 
+}
+
+
+
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width:  100vw;
+    background-color: rgba(0, 0, 0, 0.87);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transform:translateX(100%);
+    transform-origin: top right;
+    transition: transform 0.7s ease-in-out,opacity 0.7s ease,visibility 0s linear 0.7s;;
+
+}
+.sideBar img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.sideBar.active {
+    visibility: visible ;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out, opacity 0.5s ease;
+}
+.sideBar li{
+    width: 100%;
+    padding: 25px 0px;
+    text-align: center;
+    position: relative;
+
+}  
+.sideBar a{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.sideBar a::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    bottom: -3px;
+    
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%) scaleX(0);
+    transition:transform 0.5s ease;
+}
+.sideBar a:hover::after{
+   transform: translateX(-50%) scaleX(1);
+   
+}
+
+
+.menu-icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    display: inline-block;
+}
+.hover-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.menu-icon:hover #menuHoverIcon {
+    opacity: 1;
+}
+.menu-icon:hover #menuIcon {
+    opacity: 1;
+}
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+.nav {
+    z-index: 999;
+}
