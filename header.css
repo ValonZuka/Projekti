@@ -241,6 +241,13 @@
         text-align: center;
         z-index: 1; 
     }
+    h2 .logo {
+        border-radius: solid 2px;
+        display: block;
+        margin: 0 auto 20px;
+        width: 150px; 
+        height: auto;
+    }
 
     h4 {
         position: absolute;
@@ -253,3 +260,29 @@
         text-align: center;
         z-index: 1; 
     }
+
+    .footer {
+        background-color: #222; 
+        color: white; 
+        text-align: center; 
+        padding: 20px 0; 
+        position: fixed; 
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .footer-links {
+        font-size: 16px;
+    }
+    
+    .footer-link {
+        color: #fff; 
+        text-decoration: none; 
+        margin: 0 10px; 
+        transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+        color: #00bcd4; 
+    }
+    
