@@ -1,21 +1,31 @@
 function toggleMenu(){
 const sideBar = document.querySelector('.sideBar');
 const menuIcon = document.getElementById('menuIcon');
-const navlink = document.querySelectorAll('.nav-link a')
+const overlay = document.getElementById('overlay');
 
 if(sideBar.classList.contains('active')){
-    sideBar.classList.remove('active');
-    sideBar.classList.remove('visible');
-    menuIcon.src = 'icon.menu/open.png';
+    hideMenu(); 
 
    
 
 }else{
     sideBar.classList.add ('active');
-    sideBar.classList.add('visible');
+    sideBar.classList.add('active');
     menuIcon.src = 'icon.menu/close.png';
-
+    document.body.style.overflow = 'hidden';
     
+ }
 }
+function hideMenu(){
+    const sideBar = document.querySelector('.sideBar');
+    const overlay = document.getElementById('overlay');
+    const menuIcon = document.getElementById('menuIcon');
+
+    sideBar.classList.remove('active');
+    menuIcon.src = 'icon.menu/open.png';
+    
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+
 
 }
