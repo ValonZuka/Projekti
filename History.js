@@ -45,3 +45,17 @@ function toggleMenu(){
     
         
     }}  
+    let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", function() {
+    let container = document.querySelector(".container");
+    let currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        container.classList.add("hidden");
+    } else {
+        container.classList.remove("hidden");
+    }
+
+    lastScrollY = currentScrollY;
+});
