@@ -251,7 +251,7 @@
    
 
 
-    .bg-img h2 {
+     h2 {
         position: absolute;
         font-weight: bold;
         margin-bottom: 20px;
@@ -261,11 +261,12 @@
         color: white;
         font-size: 40px;
         text-align: center;
-        z-index: -1; 
+        z-index: 1; 
     }
     h2 .logo {
         border-radius: solid 2px;
         display: block;
+        color: white;
         margin: 0 auto 20px;
         width: 150px; 
         height: auto;
@@ -275,6 +276,7 @@
         position: absolute;
         top: 40%;
         left: 50%;
+        font-size: 1.5em;
         padding-top: 50px;
         transform: translate(-50%, -50%);
         color: white;
