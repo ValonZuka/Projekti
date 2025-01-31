@@ -45,3 +45,9 @@ function toggleMenu(){
     
         
     }}
+    function redirectToRegister() {
+        let email = document.getElementById("signupEmail").value;
+        if (email) {
+            window.location.href = "login.html?email=" + encodeURIComponent(email);
+        }
+    }
