@@ -59,3 +59,9 @@ window.addEventListener("scroll", function() {
 
     lastScrollY = currentScrollY;
 });
+function redirectToRegister() {
+    let email = document.getElementById("signupEmail").value;
+    if (email) {
+        window.location.href = "login.html?email=" + encodeURIComponent(email);
+    }
+}
