@@ -26,26 +26,26 @@ document.querySelector('footer button').addEventListener('click', function() {
     }  
 });
 
-function toggleMenu(){
+function toggleMenu() {
     const sideBar = document.querySelector('.sideBar');
     const menuIcon = document.getElementById('menuIcon');
-    const navlink = document.querySelectorAll('.nav-link a')
+    const navLink = document.querySelector('.nav-link'); 
     
-    if(sideBar.classList.contains('active')){
+    if(sideBar.classList.contains('active'))        
+    {
         sideBar.classList.remove('active');
         sideBar.classList.remove('visible');
-        menuIcon.src = 'icon.menu/menu.png';
-    
-       
-    
-    }else{
-        sideBar.classList.add ('active');
+        menuIcon.src = 'icon.menu/open.png';
+        navLink.classList.remove('hide-nav'); 
+    } 
+    else {
+        sideBar.classList.add('active');
         sideBar.classList.add('visible');
         menuIcon.src = 'icon.menu/close.png';
-    
-        
-    }}  
-    let lastScrollY = window.scrollY;
+        navLink.classList.add('hide-nav');  
+    }
+}
+let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", function() {
     let container = document.querySelector(".container");
