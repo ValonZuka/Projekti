@@ -1,42 +1,294 @@
-.contact-background {
-    position: fixed;
+* {  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;  
+    text-decoration: none;  
+    list-style: none;  
+}  
+
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+font-family: Arial, sans-serif;
+overflow-x: hidden; 
+background-image: url('contactus.jpg');
+background-attachment: fixed;
+    background-size: cover; 
+    background-position: center; 
+      
+}
+
+
+header .nav {  
+    position: fixed;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    background: transparent;  
+    width: 100%;  
+    padding: 10px 12%; 
+
+    z-index: 1000;  
+}  
+.hide-nav{
+pointer-events: none; 
+opacity: 0.5; 
+}
+
+
+header .nav-link {  
+    display: flex;  
+    flex: 1;
+    justify-content: center;
+    align-items: center;  
+}  
+.nav-item a{
+    color: rgb(141, 135, 135);
+}
+
+.nav-item {  
+    position: relative;  
+    margin: 0 15px;  
+    padding: 0 2px;
+    display: flex;  
+    align-items: center; 
+    justify-content: center; 
+    height: 70px;  
+    color: rgb(141, 135, 135);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; 
+}  
+.stages {  
+    color: black;  
+    z-index: 1;   
+    font-size: 24px;  
+    transition: opacity 0.3s ease, transform 0.3s ease;   
+}  
+.hover-text {  
+    color: rgb(141, 135, 135);  
+    position: absolute;  
+    left: 0;  
+    width: 100%;  
+    text-align: center;  
+    transform: translateY(20px);  
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;  
+    font-size: 24px; 
+    z-index: 0;   
+}  
+.hover-text hhh{
+    
+   left: -60px;
+
+}
+.nav-item:hover .hover-text {  
+    color: rgb(141, 135, 135);
+    transform: translateY(0); 
+    opacity: 1; 
+}  
+.nav-item:hover .stages {  
+    
+    opacity: 0;   
+    transform: translateY(-20px); 
+}
+.overlay{
+    position:fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
+    right:0;
+    bottom:0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    } 
+.overlay.active {
+    display: block;
 }
 
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block; 
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width:  100vw;
+    opacity: 0;
+
+    background-color: rgba(0, 0, 0, 0.87);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transform:translateX(100%);
+    transform-origin: top right;
+    z-index: 1000;
+    transition: transform 0.7s ease-in-out,opacity 0.7s ease,visibility 0s linear 0.7s;;
+
 }
-
-
-.contact-content {
-    position: relative;
-    max-width: 600px;
+.sideBar img{
+    display: block;
     margin: 0 auto;
-    padding: 50px;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 8px;
-    text-align: left; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
-.contact-content h1 {
-    font-size: 2.5em;
+.sideBar.active {
+    visibility: visible ;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out, opacity 0.5s ease;
+}
+.sideBar li{
+    width: 100%;
+    padding: 25px 0px;
+    text-align: center;
+    position: relative;
+
+}  
+.sideBar a{
+    color: white;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: gray; 
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.sideBar a::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 100%;
+    height: 2.2px;
+    background-color: white;
+    transform: translateX(-50%) scaleX(0);
+    transition:transform 0.5s ease;
+}
+.sideBar a:hover::after{
+   transform: translateX(-50%) scaleX(1);
+   
 }
 
 
-.contact-content p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    color: gray; 
+.menu-icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    display: inline-block;
+}
+.hover-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.menu-icon:hover #menuHoverIcon {
+    opacity: 1;
+}
+.menu-icon:hover #menuIcon {
+    opacity: 1;
+}
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+.nav {
+    z-index: 999;
+}
+
+.contact{
+    font-size: 100px;
+    font-family: Bookman, URW Bookman L, serif;
+    margin-left: 67px;
+}
+.call_us{
+    text-align: right;
+    color: rgb(57, 62, 62);
+    font-size: 50px;
+    margin-right: 80px;
+    
+}
+.call_us p{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.social-box {   /* Background of the social box */  
+    color: rgb(57, 62, 62);
+    font-size: 30px;
+    padding: 20px;  
+    text-align: center;   
+    margin: 20px auto;   
+    width: 50%;   
+}  
+
+footer {   
+    font-size: 80px;
+     text-align: right; 
+     margin-top: 10px; 
+     background-color: white;
+      padding: 100px; 
+      background-size: 500px;
+} 
+footer .Studio{
+    margin-top: -50px;
+    margin-bottom: 100px
+}
+footer .get_d {
+    color: rgb(57, 62, 62);
+    font-size: 16px; 
+    text-align: left;
+    padding: 10px 0;  
+    margin: 0 auto; 
+    width: fit-content; 
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    justify-content: center; 
+}
+
+.get_d {
+    display: block !important;
+    opacity: 1 !important;
+    bottom: -300px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.get_d .text {
+    font-size: 16px;
+    color: black;
+    margin-right: 10px; 
+}
+
+.get_d .btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.get_d .btn:hover {
+    background-color: #333;
 }
