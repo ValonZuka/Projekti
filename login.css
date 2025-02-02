@@ -6,8 +6,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-image: url('foto_login.jpeg');
-  
+  background-color: #014d4b;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,4 +176,46 @@ body {
 
 .container.active .toggle-right {
   transform: translateX(200%);
+}
+
+/* Basic Alert Styles */
+/* Basic Alert Styles */
+.alert {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+/* Error Alert */
+.alert-danger {
+  background-color: #f44336;
+  color: white;
+  border: 2px solid red;
+}
+
+/* Pop-out animation */
+.alert.show {
+  display: block;
+  animation: popOut 0.5s ease-in-out;
+}
+
+@keyframes popOut {
+  0% {
+      transform: translateX(-50%) scale(0);
+  }
+  50% {
+      transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+      transform: translateX(-50%) scale(1);
+  }
 }

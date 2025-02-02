@@ -15,6 +15,14 @@ function getEmailFromURL() {
         document.getElementById("email").value = email;
     }
 }
+window.onload = function() {
+    var alertBox = document.querySelector('.alert');
+    if (alertBox) {
+        setTimeout(function() {
+            alertBox.style.display = 'none';
+        }, 3000); // Alert disappears after 3 seconds
+    }
+};
 
 // Run function when page loads
 window.onload = getEmailFromURL;

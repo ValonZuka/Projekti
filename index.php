@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -14,42 +17,42 @@
                 <ul class="sideBar">
                     <li><a  href="#" onclick="hideMenu()"><img src="icon.menu/close.png" alt="me" height="0" width="0"></a></li>
                     <li><img src="Logo1.png" alt="Maca Image" style="width: 100px; height: 70px;"></li>
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a  href="stages.html">Stages</a></li>
-                    <li><a  href="Sets.html">Sets</a></li>
-                    <li><a  href="Support.html">Support</a></li>
-                    <li><a  href="Cars.html">TPS Picture Cars</a></li>
-                    <li><a  href="Contact.html">Contact</a></li>
-                    <li><a  href="News.html">News</a></li>
-                    <li><a  href="Entertaiment.html">Entertaiment</a></li>
-                    <li><a  href="Outreach.html">Outreach</a></li>
+                    <li><a  href="index.php">Home</a></li>
+                    <li><a  href="stages.php">Stages</a></li>
+                    <li><a  href="Sets.php">Sets</a></li>
+                    <li><a  href="cars/supp.php">Support</a></li>
+                    <li><a  href="cars/cars.php">V&R Picture Cars</a></li>
+                    <li><a  href="Contact.php">Contact</a></li>
+                    <li><a  href="News.php">News</a></li>
+                    <li><a  href="Entertaiment.php">Entertaiment</a></li>
+                    <li><a  href="Outreach.php">Outreach</a></li>
                 </ul>
             
          
             <ul class="nav-link">
                 <li class="nav-item">  
-                    <a href="Stages.html" class="stages">Stages</a>  
-                    <span href="Stages.html" class="hover-text">Stages</span>  
+                    <a href="Stages.php" class="stages">Stages</a>  
+                    <span href="Stages.php" class="hover-text">Stages</span>  
                 </li>  
                 <li class="nav-item">
-                    <a href="Sets.html" class="stages">Sets</a>
-                    <span href="Sets.html" class="hover-text">Sets</span> 
+                    <a href="Sets.php" class="stages">Sets</a>
+                    <span href="Sets.php" class="hover-text">Sets</span> 
                 </li>  
                 <li class="nav-item">
-                    <a href="Historic_District.html" class="stages">Historic District</a>
-                    <span href="Historic_District.html" class="hover-text">Historic District</span> 
+                    <a href="Historic_District.php" class="stages">Historic District</a>
+                    <span href="Historic_District.php" class="hover-text">Historic District</span> 
                 </li>  
                 <li class="nav-item">
-                    <a href="Greenspace.html" class="stages">Greenspace</a>
-                    <span href="Stages.html" class="hover-text">Greenspace</span> 
+                    <a href="Greenspace.php" class="stages">Greenspace</a>
+                    <span href="Stages.php" class="hover-text">Greenspace</span> 
                 </li>  
                 <li class="nav-item">
-                    <a href="History.html" class="stages">History</a>
-                    <span href="Stages.html" class="hover-text">History</span> 
+                    <a href="History.php" class="stages">History</a>
+                    <span href="Stages.php" class="hover-text">History</span> 
                 </li>  
                 <li class="nav-item">
-                    <a href="Contact.html" class="stages">Contact</a>
-                    <span href="Stages.html" class="hover-text">Contact</span> 
+                    <a href="Contact.php" class="stages">Contact</a>
+                    <span href="Stages.php" class="hover-text">Contact</span> 
                 </li>  
             </ul>  
             <div class="nav-item" >
@@ -108,16 +111,16 @@
     </div>
     
     <div class="fot_location" style="padding-top: 30px; background-color: white; color: black; text-align: center; margin-right: 100px; border-top: 2px;">
-        <p>Our Location   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="Contact.html" style="color: black;"> <img src="mapicon.png" style="width: 50px; margin-right: -10px ; margin-bottom: -20px; text-transform: uppercase; height: 50px;" alt="foto1">Pejton, Mreti Zogu I</a></p>
+        <p>Our Location   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="Contact.php" style="color: black;"> <img src="mapicon.png" style="width: 50px; margin-right: -10px ; margin-bottom: -20px; text-transform: uppercase; height: 50px;" alt="foto1">Pejton, Mreti Zogu I</a></p>
     </div>
     <br><br>
     <br><br>
     <footer class="footer">
         
         <div class="footer-links">
-            <a href="login.html" class="footer-link">Log In</a>
+            <a href="login.php" class="footer-link">Log In</a>
             <span> || </span>
-            <a href="login.html" class="footer-link">Register</a>
+            <a href="login.php" class="footer-link">Register</a>
         </div>
     </footer>
     

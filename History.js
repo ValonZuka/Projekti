@@ -62,6 +62,6 @@ window.addEventListener("scroll", function() {
 function redirectToRegister() {
     let email = document.getElementById("signupEmail").value;
     if (email) {
-        window.location.href = "login.html?email=" + encodeURIComponent(email);
+        window.location.href = "login.php?email=" + encodeURIComponent(email);
     }
 }

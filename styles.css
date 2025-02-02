@@ -1,0 +1,122 @@
+.logout-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+body {
+    background-color: #3e2a47; /* Dark wood color */
+    color: #f2f2f2; /* Light text for contrast */
+}
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    color: green;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+
+
+.rentals-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #4a2c24; /* Dark wood table background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rentals-table th, .rentals-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #8c5b45; /* Subtle wood trim */
+}
+.rentals-table th {
+    background-color: #6b3e2f; /* Slightly lighter wood for header */
+    font-size: 1.1em;
+}
+
+.rentals-table tr:nth-child(even) {
+    background-color: #5a3d2b; /* Alternate row shading */
+}
+
+.rentals-table tr:hover {
+    background-color: #7e4b35; /* Highlight row on hover */
+}
+
+
+/* Button styling */
+.unrent-btn {
+    padding: 8px 15px;
+    background-color: #ff6f61; /* Warm reddish tone */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.unrent-btn:hover {
+    background-color: #e55d4c;
+}
+
+/* Link styling */
+.logout-btn, .homepage {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+.homepage {
+    background-color: #4CAF50;
+    width: 170px;   
+}
+
+.homepage:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #ff6f61; /* Reddish color on hover */
+}
+
+.homepage {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Greenish-blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.homepage:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
