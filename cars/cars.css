@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    background: url('tps.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.title span.tps {
+    font-family: 'Anton', sans-serif;
+}
+
+.search-bar-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: relative;
+    top: 100px;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav button {
+    margin: 0 5px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav button:hover {
+    background-color: white;
+    color: black;
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.logo-section, .featured-categories-section, .white-background-logos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.logo-grid img, .logo-grid-5x3 img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-grid img:hover, .logo-grid-5x3 img:hover {
+    transform: scale(1.1);
+}
+
+.background-image-section {
+    background-size: cover;
+    min-height: 500px;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.background-text p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    font-weight: normal;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo-grid-5x3 a {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-grid-5x3 a::after {
+    content: 'Rent';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo-grid-5x3 a:hover::after {
+    opacity: 1;
+}

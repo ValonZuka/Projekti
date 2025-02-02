@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 120vh;
+    padding-left: 20%;
+    padding-top: 15vh;
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    margin-left: 5%;
+}
+
+.navigation {
+    margin-top: 80px;
+    padding-left: 5%;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+    background-color: white;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    margin-top: 10vh;
+    padding: 5%;
+}
+
+#offices {
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#offices::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 50%;
+    height: 80%;
+    background-image: url('off.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.office-content {
+    width: 50%;
+    padding-left: 55%;
+    text-align: left;
+    position: relative;
+}
+
+.office-content h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.office-content p.description {
+    font-size: 1.5rem;
+    font-weight: normal;
+    max-width: 90%;
+    margin-top: 50px;
+    line-height: 1.6;
+}
+
+.office-content p.small-text {
+    font-size: 1rem;
+    font-weight: normal;
+    max-width: 90%;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+
+#flex-spaces {
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#flex-spaces::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background-image: url('mg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.flex-content {
+    width: 50%;
+    padding-right: 55%;
+    text-align: left;
+    position: relative;
+}
+
+.flex-content h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.flex-content p {
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    max-width: 90%;
+    margin-top: 50px;
+    line-height: 1.6;
+}
